@@ -5,9 +5,6 @@
 ## 概要
 MFMailComposeViewControllerは、アプリからメーラーを起動するときに利用します。<br>
 
-![screen shot 2017-04-04 at 9 59 07](https://cloud.githubusercontent.com/assets/9479568/24637607/6865a4d2-191d-11e7-8a50-fdbe77dd6bb0.png)
-
-
 ## 関連クラス
 MFMailComposeViewControllerDelegate、MFMessageComposeViewControllerDelegate
 
