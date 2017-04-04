@@ -8,6 +8,9 @@ MFMailComposeViewControllerは、アプリからメーラーを起動すると�
 ## 関連クラス
 MFMailComposeViewControllerDelegate、MFMessageComposeViewControllerDelegate
 
+## 実装に当って
+MessageUI.frameworkが必要です。
+
 ## 主要メソッド
 
 |メソッド名|説明|サンプル|
