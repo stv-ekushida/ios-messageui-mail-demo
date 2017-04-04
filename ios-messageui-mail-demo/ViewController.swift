@@ -9,17 +9,41 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let mail = MailHelper()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setup()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func didTapSendMail(_ sender: UIButton) {
+        mail.sendMail(toRecipients: ["hoge@gmail.com"],
+                      subject: "お問い合わせの件",
+                      messageBody: "かくかくしかじか")
     }
+    
+    private func setup() {
+        mail.delegate = self
+        mail.topOf = self
+    }
+}
 
-
+// MARK: - MailHelperDelegate
+extension ViewController: MailHelperDelegate {
+    
+    func complated(status: MailStatus) {
+        
+        switch status {
+        case .sent(let message):
+            print(message)
+        case .canceled(let message):
+            print(message)
+        case .saved(let message):
+            print(message)
+        case .failed(let message):
+            print(message)
+        }
+    }
 }
 

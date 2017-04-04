@@ -13,6 +13,8 @@
 		BC34C0811E931BC500EA1F91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC34C0801E931BC500EA1F91 /* Assets.xcassets */; };
 		BC34C0841E931BC500EA1F91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC34C0821E931BC500EA1F91 /* LaunchScreen.storyboard */; };
 		BC34C08F1E931BC500EA1F91 /* ios_messageui_mail_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34C08E1E931BC500EA1F91 /* ios_messageui_mail_demoTests.swift */; };
+		BC34C09B1E931BD500EA1F91 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC34C09A1E931BD500EA1F91 /* MessageUI.framework */; };
+		BC34C09D1E931C1500EA1F91 /* MailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC34C09C1E931C1500EA1F91 /* MailHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		BC34C08A1E931BC500EA1F91 /* ios-messageui-mail-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-messageui-mail-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC34C08E1E931BC500EA1F91 /* ios_messageui_mail_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_messageui_mail_demoTests.swift; sourceTree = "<group>"; };
 		BC34C0901E931BC500EA1F91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC34C09A1E931BD500EA1F91 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		BC34C09C1E931C1500EA1F91 /* MailHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC34C09B1E931BD500EA1F91 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,7 @@
 				BC34C0781E931BC500EA1F91 /* ios-messageui-mail-demo */,
 				BC34C08D1E931BC500EA1F91 /* ios-messageui-mail-demoTests */,
 				BC34C0771E931BC500EA1F91 /* Products */,
+				BC34C0991E931BD500EA1F91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +83,9 @@
 		BC34C0781E931BC500EA1F91 /* ios-messageui-mail-demo */ = {
 			isa = PBXGroup;
 			children = (
+				BC34C09F1E93239B00EA1F91 /* Controllers */,
+				BC34C09E1E9320E800EA1F91 /* Helpers */,
 				BC34C0791E931BC500EA1F91 /* AppDelegate.swift */,
-				BC34C07B1E931BC500EA1F91 /* ViewController.swift */,
-				BC34C07D1E931BC500EA1F91 /* Main.storyboard */,
 				BC34C0801E931BC500EA1F91 /* Assets.xcassets */,
 				BC34C0821E931BC500EA1F91 /* LaunchScreen.storyboard */,
 				BC34C0851E931BC500EA1F91 /* Info.plist */,
@@ -94,6 +100,31 @@
 				BC34C0901E931BC500EA1F91 /* Info.plist */,
 			);
 			path = "ios-messageui-mail-demoTests";
+			sourceTree = "<group>";
+		};
+		BC34C0991E931BD500EA1F91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC34C09A1E931BD500EA1F91 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC34C09E1E9320E800EA1F91 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BC34C09C1E931C1500EA1F91 /* MailHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		BC34C09F1E93239B00EA1F91 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC34C07B1E931BC500EA1F91 /* ViewController.swift */,
+				BC34C07D1E931BC500EA1F91 /* Main.storyboard */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +177,7 @@
 				TargetAttributes = {
 					BC34C0751E931BC500EA1F91 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = PCCZJUYRT6;
 						ProvisioningStyle = Automatic;
 					};
 					BC34C0891E931BC500EA1F91 = {
@@ -201,6 +233,7 @@
 			files = (
 				BC34C07C1E931BC500EA1F91 /* ViewController.swift in Sources */,
 				BC34C07A1E931BC500EA1F91 /* AppDelegate.swift in Sources */,
+				BC34C09D1E931C1500EA1F91 /* MailHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +372,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
 				INFOPLIST_FILE = "ios-messageui-mail-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-messageui-mail-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,7 +386,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
 				INFOPLIST_FILE = "ios-messageui-mail-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.ios-messageui-mail-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
